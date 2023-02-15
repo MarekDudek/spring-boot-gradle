@@ -1,1 +1,3 @@
 rootProject.name = 'spring-boot-gradle'
+include 'module-one'
+include 'module-two'

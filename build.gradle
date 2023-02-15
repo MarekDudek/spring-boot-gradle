@@ -20,3 +20,21 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+allprojects {
+    println("As for all projects '${project.name}'")
+}
+
+subprojects {
+    println("As for all subprojects '${project.name}'")
+}
+
+def javaProjects = [
+        project(":module-one"),
+        project(":module-two")
+
+]
+
+configure (javaProjects) {
+    println("Configuring '${project.name}'")
+}
